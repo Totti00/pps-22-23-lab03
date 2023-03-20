@@ -1,0 +1,88 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.6.2 (Amazon.com Inc. Java 11.0.15)
+[debug] Load.defaultLoad until apply took 145.861079ms
+[debug]           Load.loadUnit: plugins took 67.038092ms
+[debug]           Load.loadUnit: defsScala took 0.278385ms
+[debug] [Loading] Scanning directory /Users/giacomototaro/Desktop/Università/Magistrale/I anno/II semestre/Paradigmi prog e sviluppo/Laboratorio/pps-22-23-lab03/project
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /Users/giacomototaro/Desktop/Università/Magistrale/I anno/II semestre/Paradigmi prog e sviluppo/Laboratorio/pps-22-23-lab03/project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 16.058977 ms
+[debug]               Load.resolveProject(pps-22-23-lab03-build) took 48.178704ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id pps-22-23-lab03-build, base: /Users/giacomototaro/Desktop/Università/Magistrale/I anno/II semestre/Paradigmi prog e sviluppo/Laboratorio/pps-22-23-lab03/project, plugins: List(<none>))) took 97.153319ms
+[debug] [Loading] Done in /Users/giacomototaro/Desktop/Università/Magistrale/I anno/II semestre/Paradigmi prog e sviluppo/Laboratorio/pps-22-23-lab03/project, returning: (pps-22-23-lab03-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 116.445493ms
+[debug]           Load.loadUnit: cleanEvalClasses took 0.235651ms
+[debug]         Load.loadUnit(file:/Users/giacomototaro/Desktop/Università/Magistrale/I%20anno/II%20semestre/Paradigmi%20prog%20e%20sviluppo/Laboratorio/pps-22-23-lab03/project/, ...) took 189.021408ms
+[debug]       Load.apply: load took 565.371301ms
+[debug]       Load.apply: resolveProjects took 5.663123ms
+[debug]       Load.apply: finalTransforms took 103.854437ms
+[debug]       Load.apply: config.delegates took 7.542444ms
+[debug]       Load.apply: Def.make(settings)... took 397.173134ms
+[debug]       Load.apply: structureIndex took 92.117077ms
+[debug]       Load.apply: mkStreams took 1.444067ms
+[info] loading project definition from /Users/giacomototaro/Desktop/Università/Magistrale/I anno/II semestre/Paradigmi prog e sviluppo/Laboratorio/pps-22-23-lab03/project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug]     Load.loadUnit: plugins took 4145.378736ms
+[debug]     Load.loadUnit: defsScala took 0.004365ms
+[debug] [Loading] Scanning directory /Users/giacomototaro/Desktop/Università/Magistrale/I anno/II semestre/Paradigmi prog e sviluppo/Laboratorio/pps-22-23-lab03
+[debug]       Load.loadUnit: mkEval took 7.033034ms
+[debug] [Loading] Found root project root w/ remaining 
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 1.506679 ms
+[info] loading settings for project root from build.sbt ...
+[debug]         Load.resolveProject(root) took 2.651947ms
+[debug]       Load.loadTransitive: finalizeProject(Project(id root, base: /Users/giacomototaro/Desktop/Università/Magistrale/I anno/II semestre/Paradigmi prog e sviluppo/Laboratorio/pps-22-23-lab03, plugins: List(<none>))) took 5.147535ms
+[debug] [Loading] Done in /Users/giacomototaro/Desktop/Università/Magistrale/I anno/II semestre/Paradigmi prog e sviluppo/Laboratorio/pps-22-23-lab03, returning: (root)
+[debug]     Load.loadUnit: loadedProjectsRaw took 1756.81569ms
+[debug]     Load.loadUnit: cleanEvalClasses took 5.431373ms
+[debug]   Load.loadUnit(file:/Users/giacomototaro/Desktop/Università/Magistrale/I%20anno/II%20semestre/Paradigmi%20prog%20e%20sviluppo/Laboratorio/pps-22-23-lab03/, ...) took 5908.902852ms
+[debug] Load.apply: load took 5928.14658ms
+[debug] Load.apply: resolveProjects took 0.092294ms
+[debug] Load.apply: finalTransforms took 32.797739ms
+[debug] Load.apply: config.delegates took 0.329078ms
+[debug] Load.apply: Def.make(settings)... took 106.019101ms
+[debug] Load.apply: structureIndex took 23.818722ms
+[debug] Load.apply: mkStreams took 0.003226ms
+[info] set current project to pps-code-lab-3 (in build file:/Users/giacomototaro/Desktop/Università/Magistrale/I%20anno/II%20semestre/Paradigmi%20prog%20e%20sviluppo/Laboratorio/pps-22-23-lab03/)
+[debug] > Exec(sbtPopOnFailure, None, None)
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(notifyUsersAboutShell, None, None)
+[debug] > Exec(iflast shell, None, None)
+[debug] > Exec(shell, None, None)
+[info] sbt server started at local:///Users/giacomototaro/.sbt/1.0/server/2b99e65123207cd6fa5a/sock
+[debug] Writing bsp connection file
+[info] started sbt server
