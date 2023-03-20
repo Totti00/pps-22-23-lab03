@@ -17,5 +17,6 @@ object Lab extends App{
     def flatMap[A,B](l: List[A])(f: A => List[B]): List[B] = l match
       case Cons(h, t) => append(f(h), flatMap(t)(f))
       case _ => Nil()
-
+    def mapWithFlatMap[A, B](l: List[A])(f: A => B): List[B] =
+      flatMap(l)(v => Cons(f(v), Nil()))
 }
