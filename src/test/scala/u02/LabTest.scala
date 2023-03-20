@@ -25,4 +25,8 @@ class LabTest {
   @Test def testMapwithFlatMap() =
     assertEquals(Cons("10", Cons("20", Cons("30", Nil()))), mapWithFlatMap(lst)(_ + ""))
     assertEquals(Cons(13, Cons(23, Cons(33, Nil()))), mapWithFlatMap(lst)(_ + 3))
+
+  @Test def testFilterwithFlatMap() =
+    assertEquals(Cons(20, Nil()), filterWithFlatMap(lst)(_ == 20))
+    assertEquals(Cons(10, Cons(20, Cons(30, Nil()))), filterWithFlatMap(lst)(_ >= 3))
 }

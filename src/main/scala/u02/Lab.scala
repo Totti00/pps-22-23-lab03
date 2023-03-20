@@ -1,5 +1,7 @@
 package u02
 
+import scala.annotation.tailrec
+
 object Lab extends App{
 
   enum List[A]:
@@ -7,6 +9,7 @@ object Lab extends App{
     case Nil()
 
   object List:
+    @tailrec
     def drop[A](l: List[A], n: Int): List[A] = (l, n) match
       case (Nil(), _) => Nil()
       case (l, 0) => l
@@ -19,4 +22,9 @@ object Lab extends App{
       case _ => Nil()
     def mapWithFlatMap[A, B](l: List[A])(f: A => B): List[B] =
       flatMap(l)(v => Cons(f(v), Nil()))
+    def filterWithFlatMap[A](l: List[A])(pred: A => Boolean): List[A] =
+      flatMap(l)(a => pred(a) match
+        case true => Cons(a, Nil())
+        case _ => Nil()
+      )
 }
