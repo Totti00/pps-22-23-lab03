@@ -2,7 +2,9 @@ package u02
 
 import org.junit.*
 import org.junit.Assert.*
+import u02.Optionals.*
 import Lab.*
+import u02.AlgebraicDataTypes.*
 
 class LabTest {
   import List.*
@@ -29,4 +31,13 @@ class LabTest {
   @Test def testFilterwithFlatMap() =
     assertEquals(Cons(20, Nil()), filterWithFlatMap(lst)(_ == 20))
     assertEquals(Cons(10, Cons(20, Cons(30, Nil()))), filterWithFlatMap(lst)(_ >= 3))
+
+  @Test def testMax() =
+    assertEquals(Option.Some(30), max(lst))
+    assertEquals(Option.None(), max(Nil()))
+    assertEquals(Option.Some(20), max(Cons(10, Cons(20, Cons(15, Nil())))))
+
+  @Test def testTeacherCourses() =
+    assertEquals(Cons("OS", Cons("PCD", Nil())), getTeacherCourses(Cons(Person.Teacher("Ghini", "OS"), Cons(Person.Student("Giacomo", 23), Cons(Person.Teacher("Ricci", "PCD"), Nil())))))
+    assertEquals(Nil(), getTeacherCourses(Cons(Person.Student("Luca", 16), Cons(Person.Student("Giacomo", 23), Cons(Person.Student("Marco", 32), Nil())))))
 }
