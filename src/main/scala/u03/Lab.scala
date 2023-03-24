@@ -12,6 +12,8 @@ object Lab extends App {
     case Nil()
 
   object List:
+
+    // 1, svolto da solo
     @tailrec
     def drop[A](l: List[A], n: Int): List[A] = (l, n) match
       case (Nil(), _) => Nil()
@@ -35,6 +37,7 @@ object Lab extends App {
         case _ => Nil()
       )
 
+    // 2, svolto da solo
     def max(l: List[Int]): Option[Int] = l match
       case Cons(h, t) => max(t) match
         case Some(i) if h > i => Some(h)
@@ -42,6 +45,7 @@ object Lab extends App {
         case None() => Some(h)
       case Nil() => None()
 
+    // 4, svolto da solo
     @tailrec
     def foldLeft[A, B](l: List[A])(acc: B)(f: (B, A) => B): B = l match
       case Cons(h, t) => foldLeft(t)(f(acc, h))(f)
@@ -59,8 +63,10 @@ object Lab extends App {
   object Person:
     import List.*
 
+    // 3, svolto da solo
     def getTeacherCourses(l: List[Person]): List[String] =
       flatMap(l)({ case Person.Teacher(_, c) => Cons(c, Nil()) case Person.Student(_, _) => Nil() })
+
 
   enum Stream[A]:
     private case Empty()
@@ -85,15 +91,18 @@ object Lab extends App {
     def iterate[A](init: => A)(next: A => A): Stream[A] =
       cons(init, iterate(next(init))(next))
 
+    // 5, svolto da solo
     @tailrec
     def drop[A](s: Stream[A])(n: Int): Stream[A] = s match
       case Cons(_, t) if n > 0 => drop(t())(n - 1)
       case Cons(_, _) => s
       case _ => Empty()
 
+    // 6, svolto da solo
     def constant[A](init: => A): Stream[A] =
       cons(init, constant(init))
 
+    // 7, svolto da solo
     def fibStream(): Stream[Int] =
       def _fibStream(prev: Int, current: Int): Stream[Int] =
         cons(current, _fibStream(current, current + prev))
