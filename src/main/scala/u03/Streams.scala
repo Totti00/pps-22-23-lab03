@@ -45,6 +45,11 @@ object Streams extends App :
     def constant[A](init: => A): Stream[A] =
       cons(init, constant(init))
 
+    def fibStream(): Stream[Int] =
+      def _fibStream(prev: Int, current: Int): Stream[Int] =
+        cons(current, _fibStream(current, current + prev))
+      _fibStream(1, 0)
+
   end Stream
 
   // var simplifies chaining of functions a bit..
