@@ -37,19 +37,6 @@ object Streams extends App :
     def iterate[A](init: => A)(next: A => A): Stream[A] =
       cons(init, iterate(next(init))(next))
 
-    def drop[A](s: Stream[A])(n: Int): Stream[A] = s match
-      case Cons(_, t) if n > 0 => drop(t())(n - 1)
-      case Cons(_, _) => s
-      case _ => Empty()
-
-    def constant[A](init: => A): Stream[A] =
-      cons(init, constant(init))
-
-    def fibStream(): Stream[Int] =
-      def _fibStream(prev: Int, current: Int): Stream[Int] =
-        cons(current, _fibStream(current, current + prev))
-      _fibStream(1, 0)
-
   end Stream
 
   // var simplifies chaining of functions a bit..
