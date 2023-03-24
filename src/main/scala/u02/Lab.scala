@@ -47,5 +47,11 @@ object Lab extends App{
     def getTeacherCourses(l: List[Person]): List[String] =
       flatMap(l)({case Person.Teacher(_, c) => Cons(c, Nil()) case Person.Student(_, _) => Nil()})
 
+    def foldLeft[A, B](l: List[A])(acc: B)(f: (B, A) => B): B = l match
+      case Cons(h, t) => foldLeft(t)(f(acc, h))(f)
+      case _ => acc
 
+    def foldRight[A, B](l: List[A])(acc: B)(f: (A, B) => B): B = l match
+      case Cons(h, t) => f(h, foldRight(t)(acc)(f))
+      case _ => acc
 }

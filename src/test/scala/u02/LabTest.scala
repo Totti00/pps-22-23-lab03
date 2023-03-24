@@ -3,6 +3,7 @@ package u02
 import org.junit.*
 import org.junit.Assert.*
 import u02.Optionals.*
+import u03.Streams.*
 import Lab.*
 import u02.AlgebraicDataTypes.*
 
@@ -40,4 +41,8 @@ class LabTest {
   @Test def testTeacherCourses() =
     assertEquals(Cons("OS", Cons("PCD", Nil())), getTeacherCourses(Cons(Person.Teacher("Ghini", "OS"), Cons(Person.Student("Giacomo", 23), Cons(Person.Teacher("Ricci", "PCD"), Nil())))))
     assertEquals(Nil(), getTeacherCourses(Cons(Person.Student("Luca", 16), Cons(Person.Student("Giacomo", 23), Cons(Person.Student("Marco", 32), Nil())))))
+
+  @Test def testFold() =
+    assertEquals(-60, foldLeft(lst)(0)(_ - _))
+    assertEquals(20, foldRight(lst)(0)(_ - _))
 }
